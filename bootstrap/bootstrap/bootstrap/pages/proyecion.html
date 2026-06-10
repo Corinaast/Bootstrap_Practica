@@ -1,0 +1,311 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi yo de 10 años | Recuerdos y sueños</title>
+    <!-- Bootstrap 5 CSS + Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f9f3e6 0%, #ffe6f0 100%);
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+        }
+        .hero-section {
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 2rem;
+            backdrop-filter: blur(2px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+        }
+        .card-hover {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.2);
+        }
+        footer {
+            background: #2e2c2a;
+            color: #f8e1c4;
+        }
+        .carousel-item img {
+            object-fit: cover;
+            height: 500px;
+            filter: brightness(0.9);
+            border-radius: 28px;
+        }
+        .carousel-caption {
+            background: rgba(0,0,0,0.5);
+            border-radius: 20px;
+            backdrop-filter: blur(3px);
+        }
+        .btn-soft-primary {
+            background-color: #ffb347;
+            border-color: #ff9f1a;
+            color: #2d1b0e;
+        }
+        .btn-soft-primary:hover {
+            background-color: #ff9f1a;
+            border-color: #e68900;
+            color: white;
+        }
+        .list-group-custom .list-group-item {
+            background: #fffaf2;
+            border-left: 5px solid #ffb347;
+        }
+        .quote-text {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #5a3e2b;
+        }
+        @media (max-width: 768px) {
+            .carousel-item img {
+                height: 320px;
+            }
+            .quote-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación elegante -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-emoji-smile fs-3 me-2"></i> Mi yo de 10 años
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#inicio"><i class="bi bi-house-heart"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#recuerdos"><i class="bi bi-journal-bookmark-fill"></i> Recuerdos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aventuras"><i class="bi bi-images"></i> Aventuras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reflexiones"><i class="bi bi-chat-dots"></i> Reflexiones</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección principal con texto destacado -->
+    <div class="container my-5 pt-4" id="inicio">
+        <div class="hero-section p-4 p-lg-5 text-center text-lg-start rounded-4 shadow-sm">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold text-dark">✨ Mi yo de 10 años ✨</h1>
+                    <p class="lead text-secondary">Un viaje al pasado lleno de crayones, canicas, juegos en el parque y sueños sin límites.</p>
+                    <p class="mt-3">Cuando tenía 10 años, el mundo olía a plastilina y a bizcocho recién horneado. Creía que podía tocar las nubes con una escalera de cuerda y que los superpoderes solo necesitaban mucha imaginación. Esta página es un pequeño homenaje a esa versión curiosa, inquieta y feliz de mí.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <span class="badge bg-warning text-dark p-2"><i class="bi bi-star-fill"></i> Curiosidad infinita</span>
+                        <span class="badge bg-secondary p-2"><i class="bi bi-bicycle"></i> Tardes sin reloj</span>
+                        <span class="badge bg-info text-dark p-2"><i class="bi bi-dice-6"></i> Juegos de mesa</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="bi bi-balloon-heart-fill" style="font-size: 8rem; color: #ff9966;"></i>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de tarjetas de recuerdos (tres columnas) -->
+    <div class="container my-5" id="recuerdos">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-semibold"><i class="bi bi-suit-heart-fill text-danger"></i> Tesoros de la infancia</h2>
+            <p class="text-muted">Pequeñas cápsulas del tiempo que aún llevo conmigo</p>
+        </div>
+        <div class="row g-4">
+            <!-- Tarjeta 1 -->
+            <div class="col-md-4">
+                <div class="card card-hover h-100 border-0 shadow rounded-4">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-crayons fs-1" style="color: #f4a261;"></i>
+                        <h5 class="card-title mt-3 fw-bold">Dibujos sin reglas</h5>
+                        <p class="card-text text-secondary">Pasaba horas dibujando soles con caritas, casas con ventanas cuadradas y árboles morados. No importaba la perfección, solo la diversión.</p>
+                        <a href="#" class="btn btn-outline-warning rounded-pill"><i class="bi bi-palette"></i> Ver recuerdo</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="col-md-4">
+                <div class="card card-hover h-100 border-0 shadow rounded-4">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-tree-fill fs-1" style="color: #2a9d8f;"></i>
+                        <h5 class="card-title mt-3 fw-bold">El árbol escondite</h5>
+                        <p class="card-text text-secondary">Un viejo sauce en el parque era mi fortaleza secreta. Subía a sus ramas a leer cómics y a inventar historias de piratas.</p>
+                        <a href="#" class="btn btn-outline-success rounded-pill"><i class="bi bi-tree"></i> Explorar</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="col-md-4">
+                <div class="card card-hover h-100 border-0 shadow rounded-4">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-music-note-beamed fs-1" style="color: #e76f51;"></i>
+                        <h5 class="card-title mt-3 fw-bold">Mi primer cassette</h5>
+                        <p class="card-text text-secondary">Canciones grabadas de la radio, con estática y todo. Bailaba en la sala sin preocuparme por nada, cantando a todo pulmón.</p>
+                        <a href="#" class="btn btn-outline-danger rounded-pill"><i class="bi bi-headphones"></i> Escuchar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carrusel mejorado con textos reales y más atractivo visual -->
+    <div class="container my-5" id="aventuras">
+        <div class="text-center mb-4">
+            <h2 class="display-6 fw-semibold"><i class="bi bi-camera-reels-fill"></i> Postales de mis 10 años</h2>
+            <p>Escenarios que marcaron mi imaginación infantil</p>
+        </div>
+        <div id="carouselInfancia" class="carousel carousel-dark slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselInfancia" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselInfancia" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselInfancia" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="../img/espe/ia.jpg" alt="Logo de la ESPE" width="300" class="d-block w-100" alt="Paisaje de montaña nevada">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+                        <h5 class="text-white">❄️ Excursión a la montaña</h5>
+                        <p class="text-white">Mi primera nevada real. Hicimos un muñeco de nieve con ramas de pino y una bufanda prestada.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="../img/espe/imagenEjemploEspe.png" alt="Logo de la ESPE" width="300" class="d-block w-100" alt="Paisaje de montaña nevada">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+                        <h5 class="text-white">⚽ Tardes interminables</h5>
+                        <p class="text-white">Jugar a la pelota hasta que anochecía, con las rodillas raspadas y una felicidad gigante.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="../img/espe/curro.jpg" alt="Logo de la ESPE" width="300" class="d-block w-100" alt="Paisaje de montaña nevada">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+                        <h5 class="text-white">📚 La clase de cuentos</h5>
+                        <p class="text-white">Mi profesora leía en voz alta, y por un rato viajábamos a mundos de dragones y princesas valientes.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselInfancia" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselInfancia" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Sección Collapse (acordeón moderno) con temática de reflexiones -->
+    <div class="container my-5" id="reflexiones">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-semibold"><i class="bi bi-chat-square-quote-fill"></i> Lo que aprendí a los 10</h2>
+            <p>Lecciones sencillas que aún resuenan en mi vida adulta</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="d-flex flex-wrap gap-3 justify-content-center mb-4">
+                    <a class="btn btn-soft-primary rounded-pill px-4" data-bs-toggle="collapse" href="#collapseAmistad" role="button" aria-expanded="false" aria-controls="collapseAmistad">
+                        <i class="bi bi-people-fill"></i> La amistad
+                    </a>
+                    <button class="btn btn-outline-secondary rounded-pill px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseImaginacion" aria-expanded="false" aria-controls="collapseImaginacion">
+                        <i class="bi bi-stars"></i> Imaginación
+                    </button>
+                    <button class="btn btn-outline-warning rounded-pill px-4" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse-reflex" aria-expanded="false" aria-controls="collapseAmistad collapseImaginacion">
+                        <i class="bi bi-eyeglasses"></i> Mostrar ambas
+                    </button>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="collapse multi-collapse-reflex" id="collapseAmistad">
+                            <div class="card card-body border-0 shadow-sm rounded-4 p-4 bg-light">
+                                <i class="bi bi-emoji-laughing fs-1 text-warning"></i>
+                                <h4 class="mt-2">Un abrazo sincero</h4>
+                                <p>A los 10 años aprendí que un amigo de verdad te defiende cuando se te rompe la mochila y comparte su almuerzo sin pensarlo. También aprendí que las peleas se olvidan rápido si hay un "lo siento" honesto.</p>
+                                <small class="text-muted">✨ Amistad sin filtros, esa es la magia.</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="collapse multi-collapse-reflex" id="collapseImaginacion">
+                            <div class="card card-body border-0 shadow-sm rounded-4 p-4 bg-light">
+                                <i class="bi bi-cloud-moon-fill fs-1 text-info"></i>
+                                <h4 class="mt-2">La caja de cartón</h4>
+                                <p>Con una caja vieja podía ser astronauta, conductor de auto de carreras o chef. No necesitaba tecnología costosa, solo ganas de crear. Esa lección me recuerda que la creatividad es el juguete más poderoso.</p>
+                                <small class="text-muted">🚀 Sin límites, solo el cielo.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección adicional: Lista de "Cosas que me hacían feliz" con badges e iconos -->
+    <div class="container my-5">
+        <div class="row g-4 align-items-center">
+            <div class="col-md-5">
+                <div class="bg-white p-4 rounded-4 shadow-sm text-center">
+                    <i class="bi bi-emoji-kiss fs-1" style="color:#f4acb7;"></i>
+                    <h3 class="mt-2">Mi top 5 felicidad</h3>
+                    <ul class="list-group list-group-custom mt-3">
+                        <li class="list-group-item bg-transparent"><i class="bi bi-ice-cream"></i> Helado de fresa después del colegio</li>
+                        <li class="list-group-item bg-transparent"><i class="bi bi-tv"></i> Dibujos animados los sábados</li>
+                        <li class="list-group-item bg-transparent"><i class="bi bi-backpack"></i> Excursiones con mochila llena de sandwiches</li>
+                        <li class="list-group-item bg-transparent"><i class="bi bi-moon-stars"></i> Dormir en casa de mis primos</li>
+                        <li class="list-group-item bg-transparent"><i class="bi bi-gift-fill"></i> Encontrar un mensaje secreto en la lonchera</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="hero-section p-4 rounded-4 text-center">
+                    <i class="bi bi-chat-heart-fill fs-2 text-danger"></i>
+                    <h3 class="fw-semibold">Carta a mi yo de 10 años</h3>
+                    <div class="quote-text p-3">
+                        "Ojalá supieras lo fuerte que eres, aunque a veces te costara atarte los zapatos. Sigue coleccionando piedras brillantes y riéndote por cosas sencillas. Nunca dejes de asombrarte por las luciérnagas y los arcoíris. La vida adulta está bien, pero tu forma de ver el mundo ... eso era pura magia."
+                    </div>
+                    <div class="mt-3">
+                        <span class="badge rounded-pill bg-dark p-2"><i class="bi bi-envelope-paper"></i> Con cariño, el adulto que no te olvida</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- pequeño footer con botón de regreso arriba y dato curioso -->
+    <footer class="mt-5 pt-4 pb-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <i class="bi bi-patch-heart-fill text-warning"></i> <strong>Mi yo de 10 años</strong> — Un museo emocional
+                    <p class="small mt-2">© 2025 · Recuerdos con cariño · Ilustraciones mentales protegidas con nostalgia.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <button onclick="window.scrollTo({top:0, behavior:'smooth'})" class="btn btn-sm btn-light rounded-pill px-3 shadow-sm">
+                        <i class="bi bi-arrow-up-circle"></i> Volver arriba
+                    </button>
+                    <span class="ms-3 small text-light-emphasis"><i class="bi bi-magic"></i> "Siempre hay un niño interior"</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
